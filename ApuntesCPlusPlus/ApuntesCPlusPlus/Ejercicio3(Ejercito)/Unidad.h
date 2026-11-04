@@ -10,10 +10,6 @@ public:
     std::string nombre;
     int cantidad;
     
-    //posicion, int cantidad, arma/weapon, blindaje, 
-
     virtual void Atacar(Unidad* objetivo) = 0;
 };
-// enum SoldadoType { Vehiculos, Artilleria, Aereos }
-//Soldado(SoldadoType tipo)
- //switch (tipo)
+

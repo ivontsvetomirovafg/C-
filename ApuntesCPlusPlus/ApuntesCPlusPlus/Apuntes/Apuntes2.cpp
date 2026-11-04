@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int main()
+/*int main()
 {
     //MAP (lo mismo que un dictionary en c#)
     //Key y un valor
@@ -29,6 +29,5 @@ int main()
     habilidades.insert("Curacion");
     habilidades.insert("BolaDeFuego");
     
-    cout << habilidades.size();
-    
-}
+    cout << habilidades.size(); 
+}*/
