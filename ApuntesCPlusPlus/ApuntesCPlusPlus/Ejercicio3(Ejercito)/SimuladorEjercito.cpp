@@ -5,7 +5,6 @@
 #include "Vehiculos.h"
 #include "Aereos.h"
 #include "Artilleria.h"
-#include "Soldado.h"
 
 SimuladorEjercito simulador;
 

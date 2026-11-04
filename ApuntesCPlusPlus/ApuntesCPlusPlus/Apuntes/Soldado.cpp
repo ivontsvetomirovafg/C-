@@ -1,7 +1,9 @@
 ﻿#include "Soldado.h"
 #include <iostream>
 #include <vector>
+using namespace std;
 
+//APUNTES 
 int Soldado::numeroDeTropas = 0;
 
 int main()
