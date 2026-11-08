@@ -26,13 +26,31 @@ int main()
     simulador.ejercitoB.push_back(new Artilleria(135,30,15, "Lanzacohete"));
     simulador.ejercitoB.push_back(new Aereos(70,35,50, "Bombardero"));
     simulador.ejercitoB.push_back(new Aereos(40,30,100, "Dron"));
+    
+    while (simulador.ejercitoA.size() > 0 && simulador.ejercitoB.size() > 0)
+    {
+        simulador.ejercitoA[0]->Atacar(simulador.ejercitoB[0]);
+        if (simulador.ejercitoB[0]->life <= 0)
+        {
+            simulador.ejercitoB.erase(simulador.ejercitoB.begin());
+        }
+
+        if (simulador.ejercitoB.size() > 0)
+        {
+            simulador.ejercitoB[0]->Atacar(simulador.ejercitoA[0]);
+            if (simulador.ejercitoA[0]->life <= 0)
+            {
+                simulador.ejercitoA.erase(simulador.ejercitoA.begin());
+            }
+        }
+    }
+
+    if (simulador.ejercitoA.size() > 0)
+    {
+        std::cout << "Ha ganado A, con " << simulador.ejercitoA.size() << " supervivientes" << std::endl;
+    }
+    else
+    {
+        std::cout << "Ha ganado B, con " << simulador.ejercitoB.size() << " supervivientes" << std::endl;
+    }
 }    
-
-
-    /* // El Tanque A ataca al Tanque B
-     simulador.ejercitoA[0]->Atacar(simulador.ejercitoB[0]);
-     std::cout << "Vida tanque B: " << simulador.ejercitoB[0]->life << std::endl;
- 
-     // El Coche ataca al Tanque B
-     simulador.ejercitoA[1]->Atacar(simulador.ejercitoB[0]);
-     std::cout << "Vida tanque B: " << simulador.ejercitoB[0]->life << std::endl; */
