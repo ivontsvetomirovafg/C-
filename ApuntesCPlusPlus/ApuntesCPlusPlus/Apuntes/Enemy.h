@@ -1,11 +1,11 @@
 ﻿#pragma once
+#include <functional>
 #include <iostream>
 
 class Enemy
 {
 public:
     int pepe;
-    
     virtual void Attack() =0; //indica que este metodo será implementado por distintas clases 
     
     /*Enemy() //Constructor

@@ -7,7 +7,7 @@
 #include "Artilleria.h"
 
 SimuladorEjercito simulador;
-
+/*
 int main()
 {
     // EJERCITO A
@@ -53,4 +53,4 @@ int main()
     {
         std::cout << "Ha ganado B, con " << simulador.ejercitoB.size() << " supervivientes" << std::endl;
     }
-}    
+}    */
